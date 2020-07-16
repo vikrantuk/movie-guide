@@ -1,10 +1,11 @@
 import React, { Component, Fragment } from 'react';
 import './App.css';
 import Card from './card';
-// import key from './key';
-import SearchBox from './SearchBox'
+import key from './key';
+import SearchBox from './SearchBox';
+import Scroll from './scroll';
 
-const key = 'f41ba8cc';
+
 
 class App extends Component {
   constructor(){
@@ -28,7 +29,9 @@ class App extends Component {
         <div className="tc">
           <h1 className="f1">Your Movie Guide</h1>
           <SearchBox searchChange={this.onSearchChange}/>
-          <Card movies={this.state.movies}/>
+          <Scroll>
+            <Card movies={this.state.movies}/>
+          </Scroll>
         </div>
       </Fragment>
     );
