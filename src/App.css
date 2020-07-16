@@ -1,0 +1,17 @@
+.App {
+  text-align: center;
+}
+
+@font-face {
+  font-family: 'Discoteque-St';
+  src:url('Discoteque-St.ttf.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+h1 { 
+  font-family: 'Discoteque-St';
+}
+
+.bg-black{
+  color: white;
+}
