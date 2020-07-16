@@ -16,11 +16,11 @@ class App extends Component {
     }
   }
 
-  onSearchChange = (event)=>{
-    this.setState({searchfield:event.target.value})
+  onSearchChange = async (event)=>{
+    await this.setState({searchfield:event.target.value})
     fetch(`https://www.omdbapi.com/?t=${this.state.searchfield}&apikey=${key}`)
       .then(response => response.json())
-      .then(user => this.setState({movies: user}));
+      .then(user =>this.setState({movies: user}));
   }
 
   render(){
